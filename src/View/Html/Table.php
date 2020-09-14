@@ -37,9 +37,9 @@ class Table extends AbstractTag
         $str = "";
 
         foreach ($data as $row) {
-            $str .= "\t<tr>\n";
+            $str .= "\t<tr class='tr'>\n";
             foreach ($row as $cell) {
-                $str .= "\t\t<td>$cell</td>\n";
+                $str .= "\t\t<td class='td'>$cell</td>\n";
             }
             $str .= "\t</tr>\n";
         }

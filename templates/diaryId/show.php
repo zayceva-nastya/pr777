@@ -11,19 +11,21 @@ use View\Html\Html;
  * @var array $table
  * @var int $user_id
  */
+//print_r($table);
+//
+//echo TexLab\Html\Html::table()
+//    ->setData($table)
+//    ->setHeaders($comments)
+//    ->setClass('tableDiary')
+//    ->removeColumns([1 => 'id', 2 => 'users_id'])
+//    ->html();
 
-echo Html::create("Pagination")
-    ->setClass('pagination')
+
+echo Html::create('TableEdited2')
     ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
-
-
-echo Html::create('TableEdited')
-    ->setControllerType($type)
-    ->setHeaders($comments)
+    ->setHeaders([1 => '№', 2 => 'Упражнение', 3 => 'Времявыполнения/Количество повторений'])
     ->data($table)
-    ->setClass('table')
+    ->setClass('tableDiary')
     ->html();
 
 
@@ -48,25 +50,43 @@ echo Html::create('TableEdited')
 //echo $form->html();
 
 
-print_r($usersList);
+//print_r($usersList);
 ?>
-<form action="?action=add&type=<?= $type ?>" method="post" class="guestbookform">
+<form action="?action=add&type=<?= $type ?>" method="post" class="hidden" id="addForm">
     <label> <?= $comments['exercise'] ?>
-        <input type="text" name="exercise">
+        <input class="ml-5" type="text" name="exercise">
     </label>
     <label> <?= $comments['lead_time'] ?>
         <input type="text" name="lead_time">
     </label>
-    <label> <?= $comments['date'] ?>
-        <input type="text" name="date">
-    </label>
-
-
-    <input type="hidden" name="user_id" value="<?= $user_id ?>">
-
-
-    <!--    <label> --><? //= $comments['users_id'] ?>
-    <!--    --><? //=(new Select())->setName('users_id')->setId('users_id')->setData($usersList)->html()?>
+    <!--    <label> --><?php //= $comments['date'] ?>
+    <!--        <input class="ml-7" type="text" name="date">-->
     <!--    </label>-->
-    <input type="submit" value="Отправить">
+
+    <input type="hidden" name="users_id" value="<?= $user_id ?>">
+
+    <input id="formDiaryOk" type="submit" value="Добавить">
 </form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<a class="btn btn-primary" id="addButton">➕➕➕</a>
+<a id="closeFormButton"></a>
+<div id="shadow" class="hidden"></div>
+
+</body>
+<?php
+echo Html::create("Pagination")
+    ->setClass('pagination')
+    ->setControllerType($type)
+    ->setPageCount($pageCount)
+    ->html();
+?>
+</html>

@@ -8,11 +8,6 @@ use View\Html\Html;
  * @var string $type Имя контроллера
  */
 
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
 
 echo Html::create('TableEdited')
     ->setControllerType($type)
@@ -21,30 +16,41 @@ echo Html::create('TableEdited')
     ->setClass('table')
     ->html();
 
-
-$form = Html::create('Form')
-    ->setMethod('POST')
-    ->setAction("?action=add&type=$type")
-    ->setClass('hidden')
-    ->setId('addForm');
-
-
-foreach ($fields as $field) {
-    $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-   if($field == 'user_id'){
-    $form->addContent(Html::create('input')->settype('hidden')->setName($field)->setId($field)->html());
-   }
-    $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-}
-
-$form->addContent(
-    Html::create('Input')
-        ->setType('submit')
-        ->setValue('OK')
-        ->html()
-);
-
-echo $form->html();
+//
+//$form = Html::create('Form')
+//    ->setMethod('POST')
+//    ->setAction("?action=add&type=$type")
+//    ->setClass('hidden')
+//    ->setId('addForm');
+//
+//
+//foreach ($fields as $field) {
+//    $form->addContent(Html::create('Label')
+//        ->setFor($field)
+//        ->setInnerText($comments[$field])
+//        ->html());
+//    if ($field == 'date') {
+//        $form->addContent(Html::create('input')
+//            ->settype('datetime-local')
+//            ->setName($field)
+//            ->setId($field)
+//            ->html());
+//    }else {
+//        $form->addContent(Html::create('input')
+//            ->setName($field)
+//            ->setId($field)
+//            ->html());
+//    }
+//}
+//
+//$form->addContent(
+//    Html::create('Input')
+//        ->setType('submit')
+//        ->setValue('OK')
+//        ->html()
+//);
+//
+//echo $form->html();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,9 +62,17 @@ echo $form->html();
 </head>
 
 <body>
-    <a class="btn btn-primary" id="addButton">➕➕➕</a>
-    <a  id="closeFormButton"></a>
-    <div id="shadow" class="hidden"></div>
+<!--<a class="btn btn-primary" id="addButton">➕➕➕</a>-->
+<!--<a id="closeFormButton"></a>-->
+<!--<div id="shadow" class="hidden"></div>-->
+
 </body>
 
 </html>
+<?php
+echo Html::create("Pagination")
+    ->setClass('pagination')
+    ->setControllerType($type)
+    ->setPageCount($pageCount)
+    ->html();
+?>

@@ -1,36 +1,35 @@
 <?php
 
-use TexLab\Html\Select;
 use View\Html\Html;
 
 /** @var int $id
  * @var string $type
  * @var array $fields
  * @var array $comments
- *  @var array $usersList
  */
 
-?>
+$form = Html::create('Form')
+    ->setMethod('POST')
+    ->setAction("?action=edit&type=$type")
+    ->setClass('form');
 
-<form action="?action=edit&type=<?= $type ?>" method="post" class="guestbookform">
+foreach ($fields as $name => $value) {
+    if ($name == 'date') {
+        $form->addContent(Html::create('input')
+            ->setType('hidden')
+            ->setName($name)
+            ->setId($name)
+            ->setValue($value)
+            ->html());
+    } elseif ($name == 'users_id') {
+        $form->addContent(Html::create('input')->setType('hidden')->setName($name)->setId($name)->setValue($value)->html());
+    } else {
+        $form->addContent(Html::create('Label')->setFor($name)->setInnerText($comments[$name])->html());
+        $form->addContent(Html::create('input')->setName($name)->setId($name)->setValue($value)->html());
+    }
 
-    <input type="hidden" name="id" value="<?= $id ?>">
+}
 
-    <label> <?= $comments['caption'] ?>
-        <input type="tel" name="caption" value="<?= $fields['caption'] ?>">
-    </label>
-    <label> <?= $comments['content'] ?>
-        <textarea name="content" cols="50" rows="10"><?=$fields['content'] ?></textarea>
-    </label>
-    <label> <?= $comments['image'] ?>
-        <input type="file" name="image" >
-    </label>
-
-<!--    <input type="hidden" name="users_id" value="--><?//= $user_id ?><!--">-->
-
-<!--    <label> --><?//= $comments['users_id'] ?>
-<!--        --><?//= (new Select())->setName('users_id')->setId('users_id')->setData($usersList)->setSelectedValues([(string) $fields['users_id']])->html() ?>
-<!--    </label>-->
-
-    <input type="submit" value="Отправить">
-</form>
+echo $form->addContent(Html::create('Input')->setType('hidden')->setName('id')->setValue($id)->html())
+    ->addContent(Html::create('Input')->setType('submit')->setValue('OK')->html())
+    ->html();

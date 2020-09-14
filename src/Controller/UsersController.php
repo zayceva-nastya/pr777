@@ -41,6 +41,7 @@ class UsersController extends AbstractTableController
                     ->getUsersPage($data['get']['page'] ?? 1)
             ]);
     }
+
     public function actionShowEdit(array $data)
     {
         parent::actionShowEdit($data);
@@ -49,17 +50,23 @@ class UsersController extends AbstractTableController
             ->setFolder('users')
             ->addData([
                 'groupNames' => $this->table->getGroupNames()
-            ]);
-        ;
+            ]);;
     }
+
     public function actionAdd(array $data)
     {
-//        $data['post']['password'] = md5($data['post']['password'] . Config::SALT);
-        parent::actionAdd($data);
+//       $data['post']['password'] = md5($data['post']['password'] . Config::SALT);
+        if (!empty($data)) {
+            parent::actionAdd($data);
+        }
+
     }
+
     public function actionEdit(array $data)
     {
 //        $data['post']['password'] = md5($data['post']['password'] . Config::SALT);
         parent::actionEdit($data);
     }
+
+
 }

@@ -11,4 +11,5 @@ document.getElementById("addButton").onclick = fun
 
 document.getElementById("closeFormButton").onclick = fun
 
-document.getElementById("shadow").onclick = fun
+document.getElementById("shadow").onclick = fun;
+

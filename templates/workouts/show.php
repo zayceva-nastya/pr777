@@ -6,18 +6,36 @@ use View\Html\Html;
  * @var array $fields Список полей таблицы
  * @var array $comments Комментарии к полям таблицы
  * @var string $type Имя контроллера
+ * @var array $table Данные из таблицы
  */
+//print_r($table);
+
+
+
+
+foreach ($table as &$row) {
+//    $row['gifs'] = $row['id'];
+    $ext = pathinfo($row['gifs'], PATHINFO_EXTENSION);
+    $row['gifs'] = "<img src='public/gifs/$row[gifs]' class='img'>";
+}
+//print_r($table);
+echo Html::create('TableforAddExercise')
+    //->setHeaders($comments)
+    ->data($table)
+    ->setClass('tableworkots')
+    ->html();
+//
+
+//echo TexLab\Html\Html::table()
+ //   ->setData($table)
+   // ->setClass('tableworkots  ')
+  //  ->removeColumns([1 => 'id',2 => 'group_id'])
+    //->html();
 
 echo Html::create("Pagination")
     ->setClass('pagination')
     ->setControllerType($type)
     ->setPageCount($pageCount)
-    ->html();
-
-echo Html::create('Table')
-    ->setHeaders($comments)
-    ->data($table)
-    ->setClass('table')
     ->html();
 
 

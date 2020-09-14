@@ -13,12 +13,6 @@ use View\Html\Html;
 // print_r($groupNames);
 
 
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
-//print_r($table);
 
 echo Html::create('TableEdited')
     ->setControllerType($type)
@@ -31,7 +25,8 @@ echo Html::create('TableEdited')
 $form = Html::create('Form')
     ->setMethod('POST')
     ->setAction("?action=add&type=$type")
-    ->setClass('form');
+    ->setClass('form')
+    ->setId('addForm2');
 
 foreach ($fields as $field) {
     $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
@@ -62,3 +57,29 @@ $form->addContent(
 );
 
 echo $form->html();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a class="btn btn-primary" id="addButton2">➕➕➕</a>
+    <a  id="closeFormButton2"></a>
+    <div id="shadow2" class="hidden"></div>
+
+</body>
+<?php
+echo Html::create("Pagination")
+->setClass('pagination')
+->setControllerType($type)
+->setPageCount($pageCount)
+->html();
+//print_r($table);
+?>
+
+</html>
