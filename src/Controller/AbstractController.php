@@ -16,6 +16,7 @@ abstract class AbstractController
     protected function redirect(string $location)
     {
         header("Location: $location");
+        exit();
     }
 
     protected function getClassName()
