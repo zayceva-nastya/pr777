@@ -3,7 +3,7 @@
 namespace View\Html;
 
 
-class TableforAddExercise  extends Table
+class TableforAddExercise extends Table
 {
     protected $type;
 
@@ -12,6 +12,7 @@ class TableforAddExercise  extends Table
         $this->type = $type;
         return $this;
     }
+
     public function setHeaders(array $headers)
     {
         parent::setHeaders($headers);
@@ -25,8 +26,10 @@ class TableforAddExercise  extends Table
 
         foreach ($data as $row) {
             $str .= "\t<tr>\n";
-            foreach ($row as $cell) {
-                $str .= "\t\t<td>$cell</td>\n";
+            foreach ($row as $key => $cell) {
+                if (($key != "id") && ($key != "group_id")) {
+                    $str .= "\t\t<td>$cell</td>\n";
+                }
             }
             $str .= "\t\t<td>" .
                 "<a role='button' href='?action=addexercise&type=diaryid&id=$row[id]&exercise=$row[exercise]' class='btn btn-success'>" .
