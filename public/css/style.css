@@ -40,36 +40,46 @@
     display: none;
 }
 
-
-
-#addForm label {
+#addForm label, #signupform label, #signupform input, #loginform input {
     display: block;
 }
 
-#addForm, #signupform,#authform {
+#authform label, #signupform label {
+    color: whitesmoke;
+}
+
+#authform input, #signupform input, #signupform a {
+    border: 1px solid black;
+}
+
+#addForm, #signupform, #authform {
     position: absolute;
+    font-family: Cinzel;
     padding: 2%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid black;
-    background-color: rgb(204,204,51);
+    background: linear-gradient(to right, rgb(128, 128, 128), rgb(0, 0, 0));
+    /*background-color: rgb(204, 204, 51);*/
     z-index: 2;
     color: black;
 }
+
 #signupform {
     position: absolute;
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding: 3%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid black;
-    background-color: rgb(255,255,102);
+    background-color: rgb(255, 255, 102);
     z-index: 2;
 }
-#OK{
+
+#OK {
 
     width: 30%;
     margin-top: 3%;
@@ -77,19 +87,20 @@
     border: none;
     font-family: Satisfy !important;
 
-background: linear-gradient(to right, red,yellow);
+    background: linear-gradient(to right, red, yellow);
 }
+
 #a
-/*#authform {
-    position: absolute;
-    padding: 2%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
-    background-color: rgb(255,255,102);
-    z-index: 2;
-} */
+    /*#authform {
+        position: absolute;
+        padding: 2%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid black;
+        background-color: rgb(255,255,102);
+        z-index: 2;
+    } */
 #shadow {
     position: fixed;
     padding: 20px;
@@ -100,15 +111,24 @@ background: linear-gradient(to right, red,yellow);
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
 }
-#formDiaryOk{
+
+#formDiaryOk {
     background-color: black;
     color: yellow;
     margin-left: 30%;
     border: black;
 
 }
-#addButton{
-    background-color: rgb(255,255,102);
+
+.gridBox {
+    display: grid;
+    grid-template-areas:
+"one one one"
+"two      two";
+}
+
+#addButton {
+    background-color: rgb(255, 255, 102);
     border: black;
 }
 
@@ -118,15 +138,39 @@ background: linear-gradient(to right, red,yellow);
 
 }
 
-#loginform input {
-    display: block;
+
+.start {
+    background: linear-gradient(lightslategrey, lightgoldenrodyellow);
+    border-radius: 5% 5% 0 5%;
+    position: center;
+    border: none !important;
+    color: black !important;
+    margin-bottom: 2%;
 }
 
 .hello {
+
+}
+
+#boxButton {
+    margin: 15% 40%;
+}
+
+.mainStr {
     height: 100vh;
     width: 100vw;
     color: yellow;
-    background-image: url("../image/black.jpg");
+    background-image: url("../image/hello.jpg");
+    /*opacity: 0.5;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.planeLayout {
+    height: 100vh;
+    width: 100vw;
+    color: yellow;
+    background-image: url("../image/plane.jpg");
     /*opacity: 0.5;*/
     background-size: cover;
     background-repeat: no-repeat;
@@ -160,32 +204,68 @@ background: linear-gradient(to right, red,yellow);
     font-size: 1.2rem;
     padding-left: 5%;
 }
-.tableDiary{
-    border: 1px solid red;
-}
+
+/*. tableDiary tr td {*/
+/*    border: 1px solid red;*/
+/*    color: yellow;*/
+/*}*/
 
 .menu {
     font-family: 'Cinzel', serif;
     font-size: 1.5rem;
-    /*opacity: 0.7;*/
+    opacity: 0.7;
+    /*background-color: rgba(0,0,0,0.7);*/
 }
 
 table {
-    width: 100%;
+    width: 100vw;
     padding: 10%;
     font-size: 1rem;
     margin-top: 3%;
+    border: none !important;
 }
-.tableDiary{
-    background-color: white !important;
-    color: rgb(255,255,102);
+.tableDiary th{
+    color: goldenrod!important;
+}
+
+.tableDiary td,.tableDiary th {
+    background-color: rgba(0,0,0,0.9) !important;
+    /*color: rgb(255, 255, 102);*/
+    color: white;
+    /*border: 1px solid black !important;*/
+    text-align: center;
+    /*border: none !important;*/
+    /*padding: 5%;*/
 
 }
-.bar{
-    background-color: black !important;
+
+.tableDiary tr {
+    font-size: 2rem;
+}
+
+.bar {
+    background-color: rgba(0, 0, 0, 0.3) !important;
 
 }
-.start{
-    position: center;
+
+#diaryBut {
+    height: 30%;
+    width: 100%;
+    font-size: 2rem;
+    padding: 20%;
+    color: black;
+    font-weight: bold;
+
+}
+
+.exerc {
+    padding: 0% 5%;
+    font-weight: bolder !important;
+    background: linear-gradient(to left, yellow, black);
+}
+
+.boxTableDiary {
+    height: 50%;
+    width: 100%;
 }
 

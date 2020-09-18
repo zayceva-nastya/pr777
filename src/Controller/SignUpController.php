@@ -27,15 +27,13 @@ class SignUpController extends UsersController
 
     public function actionAdd(array $data)
     {
-
-
-        if (!empty($data['post']) && ($data['post']['login'] != '') && ($data['post']['password'] != '')) {
+        if (!empty($data['post']) && ($data['post']['login'] != '') && ($data['post']['password'] != '')&&strlen($data['post']['login']<=20)) {
             $data['post']['group_id'] = $this->table->getGroupIdByCode('user');
             $this->table->add($data['post']);
             $this->redirect('?action=loginform&type=auth');
         } else {
-
             $this->redirect('?action=show&type=signup');
+            echo"bbbb";
         }
     }
 

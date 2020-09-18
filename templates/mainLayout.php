@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Satisfy&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="mainStr">
     <?php
     switch ($_SESSION['user']['cod']) {
         case 'admin':

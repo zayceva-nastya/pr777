@@ -10,10 +10,10 @@
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item menu<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                    <a class="nav-link" id="enter" href="?action=loginform&type=auth">Войти</a>
+                    <a class="nav-link" id="enter" href="?action=loginform&type=auth">SignIn</a>
                 </li>
                 <li class="nav-item menu<?= $controllerType == 'add' ? ' active' : '' ?>">
-                    <a class="nav-link" id="signup" href="?action=show&type=signup">Регистрация</a>
+                    <a class="nav-link" id="signup" href="?action=show&type=signup">SignUp</a>
                 </li>
                 <span class="navbar-text">
                     <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] . '(' . $_SESSION['user']['name'] . ')' : '' ?>

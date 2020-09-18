@@ -13,7 +13,8 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" name="password">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn start" href="/">BACK</a>
+        <button type="submit" class="btn btn-primary start">OK</button>
     </form>
 </div>
 <script src="public/js/auth.js"></script>

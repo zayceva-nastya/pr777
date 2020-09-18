@@ -54,6 +54,9 @@ class RasminkaController extends AbstractTableController
     public function actionShowEdit(array $data)
     {
         // print_r($data['get']['id']);
+
+        /** @var int $id */
+
         $id = $data['get']['id'];
 
         $viewData = $this->table->get(['id' => $id])[0];

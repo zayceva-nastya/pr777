@@ -12,4 +12,5 @@ class Config
     public const PAGE_SIZE_DIARY = 5;
     public const BLOCK_LIST = '../BlockList.json';
     public const SALT = '12345678910';
+
 }

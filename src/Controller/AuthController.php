@@ -55,7 +55,7 @@ class AuthController extends AbstractController
             $this->redirect("?action=loginform&type=" . $this->getClassName());
         } else {
             $_SESSION['user'] = $kod;
-            $this->redirect('/');
+            $this->redirect('?action=start&type=default');
         }
     }
 

@@ -1,11 +1,10 @@
-
-
 <form action="?type=signup&action=add" method="post" id="signupform">
-    <label> Логин <input type="text" name="login" id="login"></label>
-    <label> Пароль <input type="text" name="password"></label>
-    <lablel> ФИО <input type="text" name="FIO"></lablel>
-        <input id="OK" type="submit" value="OK">
-</form>
-<div id="response"></div>
+    <label> Login <input type="text" name="login" id="login"></label>
+    <label> Password <input type="text" name="password"></label>
+    <label> Name <input type="text" name="FIO"></label>
+    <input class="start" type="submit" value="OK">
+    <a class="btn start" href="/">BACK</a>
 
-<script src="public/js/signup.js"></script>
+</form>
+
+

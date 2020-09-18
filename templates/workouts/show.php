@@ -11,8 +11,6 @@ use View\Html\Html;
 //print_r($table);
 
 
-
-
 foreach ($table as &$row) {
 //    $row['gifs'] = $row['id'];
     $ext = pathinfo($row['gifs'], PATHINFO_EXTENSION);
@@ -24,13 +22,15 @@ echo Html::create('TableforAddExercise')
     ->data($table)
     ->setClass('tableworkots')
     ->html();
-//
+
+
+
 
 //echo TexLab\Html\Html::table()
- //   ->setData($table)
-   // ->setClass('tableworkots  ')
-  //  ->removeColumns([1 => 'id',2 => 'group_id'])
-    //->html();
+//   ->setData($table)
+// ->setClass('tableworkots  ')
+//  ->removeColumns([1 => 'id',2 => 'group_id'])
+//->html();
 
 echo Html::create("Pagination")
     ->setClass('pagination')
@@ -59,7 +59,7 @@ echo Html::create("Pagination")
 //
 //echo $form->html();
 ?>
-<!-- <form action="?action=add&type=<?=$type?>" method="post" class="guestbookform">
+<!-- <form action="?action=add&type=<?= $type ?>" method="post" class="guestbookform">
     <label> <?= $comments['text'] ?>
         <textarea name="text" cols="50" rows="10"></textarea>
     </label>

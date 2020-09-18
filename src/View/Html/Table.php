@@ -12,6 +12,7 @@ class Table extends AbstractTag
     public function __construct()
     {
         $this->clear();
+
     }
 
     public function clear(): self
@@ -50,7 +51,7 @@ class Table extends AbstractTag
 
     public function html()
     {
-        return "<table class='table table-striped table-dark'  
+        return "<table   
             " . $this->style .
             $this->class .
             ">\n<tr>\n" .

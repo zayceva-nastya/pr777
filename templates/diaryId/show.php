@@ -20,13 +20,19 @@ use View\Html\Html;
 //    ->removeColumns([1 => 'id', 2 => 'users_id'])
 //    ->html();
 
+if (empty($table)) {
+    echo "<div id='diaryBut'>Нажми <a class='btn exerc' href='?action=show&type=planka' >GO</a> чтобы добавить упражнения</div>";
+} else {
+    echo "<div class='boxTableDiary'>" .
+        Html::create('TableEdited2')
+            ->setControllerType($type)
+            ->setHeaders([1 => '№', 2 => 'Упражнение', 3 => 'Количество повторений'])
+            ->data($table)
+            ->setClass('tableDiary')
+            ->html()
+        . "</div>";
 
-echo Html::create('TableEdited2')
-    ->setControllerType($type)
-    ->setHeaders([1 => '№', 2 => 'Упражнение', 3 => 'Времявыполнения/Количество повторений'])
-    ->data($table)
-    ->setClass('tableDiary')
-    ->html();
+}
 
 
 //$form = Html::create('Form')

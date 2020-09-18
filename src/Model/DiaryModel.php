@@ -17,7 +17,7 @@ class DiaryModel extends DbEntity
 //            ->setSelect(' `diary`.`exercise`, `diary`.`lead_time`')
             ->setFrom('`users`,`diary`')
             ->setWhere('`users`.`id` = `diary`.`users_id`')
-            ->setOrderBy('`diary`.`id`')
+            ->setOrderBy('`diary`.`id`DESC')
             ->getPage($page);
     }
 
