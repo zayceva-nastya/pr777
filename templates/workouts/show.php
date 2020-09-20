@@ -17,14 +17,13 @@ foreach ($table as &$row) {
     $row['gifs'] = "<img src='public/gifs/$row[gifs]' class='img'>";
 }
 //print_r($table);
-echo "<div class='boxTableWorkouts'>" .
+echo
     Html::create('TableforAddExercise')
         //->setHeaders($comments)
         ->data($table)
         ->setClass('tableworkots')
 //    ->setClass('tableworkots2')
-        ->html()
-    . "</div>";
+        ->html();
 
 
 //echo TexLab\Html\Html::table()

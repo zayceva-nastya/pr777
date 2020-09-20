@@ -4,10 +4,13 @@
 
 .table {
     border-collapse: collapse;
+    background-color: black;
 }
-.img{
-    height: 20%;
-    width: 20%;
+
+.img {
+    height: 250px;
+    width: 360px;
+    margin-bottom: 1%;
 }
 
 .form textarea {
@@ -93,9 +96,10 @@
 
     background: linear-gradient(to right, red, yellow);
 }
-.pagination{
-    position: fixed;
-    left:90%;
+
+.pagination {
+    position: sticky;
+    left: 90%;
     bottom: 10%;
 }
 
@@ -129,12 +133,6 @@
 
 }
 
-.gridBox {
-    display: grid;
-    grid-template-areas:
-"one one one"
-"two      two";
-}
 
 #addButton {
     background-color: rgb(255, 255, 102);
@@ -158,16 +156,29 @@
 }
 
 .hello {
-
+    text-align: center;
+    padding-top: 2%;
+    height: 40%;
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
 #boxButton {
     margin: 15% 40%;
+    display: flex;
+    flex-direction: row;
 }
 
+#boxButton a:first-child {
+    margin-left: 2%;
+}
+
+
 .mainStr {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     color: yellow;
     background-image: url("../image/hello.jpg");
     background-size: cover;
@@ -187,11 +198,48 @@
     font-family: Satisfy !important;
     font-size: 2rem;
 }
-.tableworkots tr{
-    display: block;
-    display: flex;
-    flex-direction: row;
 
+.tableworkots {
+    color: goldenrod;
+    margin: 0% 2% !important;
+    margin-right: 2%;
+    height: 100%;
+    width: 100%;
+}
+
+.tableworkots tr {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border: 1px solid white;
+    display: block;
+    display: grid;
+    grid-template-columns:2fr 2fr 2fr;
+    grid-template-areas:
+    "exercise exercise exercise "
+    "description description gifs"
+    "lead_time pull gifs";
+
+}
+
+.exercise {
+    grid-area: exercise;
+}
+
+.description {
+    grid-area: description;
+}
+
+.lead_time {
+    grid-area: lead_time;
+}
+
+.gifs {
+    grid-area: gifs;
+}
+
+.pull {
+    grid-area: pull !important;
+    background: linear-gradient(to right, goldenrod, black) !important;
+    border: none;
 }
 
 .tableworkots tr td {
@@ -202,28 +250,24 @@
 
 .tableworkots tr td:first-child {
     font-size: 2rem;
-    padding-left: 10%;
-    padding-bottom: 3%;
+    text-align: center;
+    /*padding-left: 10%;*/
+    padding-bottom: 1%;
 
-}
-
-.tableworkots tr td:last-child {
-    padding-left: 20%;
-    /*padding-top: 1.5%;*/
-    /*padding-bottom: 5%;*/
 }
 
 .tableworkots tr td:nth-child(2), .tableworkots tr td:nth-child(3) {
-    font-size: 1.2rem;
-    padding-left: 5%;
+    padding-left: 2%;
 }
-.tableworkots td:nth-child(4){
-    padding-top: 1.5%;
+
+.tableworkots td:nth-child(4) {
+    /*padding-top: 1.5%;*/
 }
-.boxTableWorkouts{
-    height: 100%;
+
+.boxTableWorkouts {
+    height: 150%;
     width: 100%;
-    background-color: rgba(0,0,0,0.9) !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
     margin-top: 0%;
 }
 
@@ -242,18 +286,15 @@ table {
     /*margin-top: 3%;*/
     border: none !important;
 }
-.tableDiary th{
-    color: goldenrod!important;
+
+.tableDiary th {
+    color: goldenrod !important;
 }
 
-.tableDiary td,.tableDiary th {
-    background-color: rgba(0,0,0,0.9) !important;
-    /*color: rgb(255, 255, 102);*/
+.tableDiary td, .tableDiary th {
+    background-color: rgba(0, 0, 0, 0.9) !important;
     color: white;
-    /*border: 1px solid black !important;*/
     text-align: center;
-    /*border: none !important;*/
-    /*padding: 5%;*/
 
 }
 
@@ -285,5 +326,15 @@ table {
 .boxTableDiary {
     height: 50%;
     width: 100%;
+}
+
+.gridBox {
+    display: grid;
+    grid-template-columns:2fr 2fr 2fr;
+    padding: 1%;
+}
+
+.box1, .box2, .box3, .box4, .box5 {
+    /*background-color: rgba(0, 0, 0, 0.9) !important;*/
 }
 

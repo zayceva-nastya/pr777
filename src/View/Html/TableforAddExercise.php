@@ -28,12 +28,27 @@ class TableforAddExercise extends Table
             $str .= "\t<tr>\n";
             foreach ($row as $key => $cell) {
                 if (($key != "id") && ($key != "group_id")) {
-                    $str .= "\t\t<td>$cell</td>\n";
+//                    $str .= "\t\t<td>$cell</td>\n";
+                    if ($key == "exercise") {
+                        $str .= "\t\t<td class='exercise'>$cell</td>\n";
+                    }
+                    if ($key == "description") {
+                        $str .= "\t\t<td class='description'>$cell</td>\n";
+                    }
+                    if ($key == "lead_time") {
+                        $str .= "\t\t<td class='lead_time'>$cell</td>\n";
+                    }
+                    if ($key == "gifs") {
+                        $str .= "\t\t<td class='gifs'>$cell</td>\n";
+                    }
                 }
+
+
+//                $str .= "\t\t<td>$cell</td>\n";
             }
             $str .= "\t\t<td>" .
-                "<a role='button' href='?action=addexercise&type=diaryid&id=$row[id]&exercise=$row[exercise]' class='btn btn-success'>" .
-                "Pull</a></td>\n";
+                "<a role='button' href='?action=addexercise&type=diaryid&id=$row[id]&exercise=$row[exercise]' class=' pull btn btn-success'>" .
+                "Добавить в план</a></td>\n";
 
         }
 

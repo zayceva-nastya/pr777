@@ -12,18 +12,19 @@
                 <a class="nav-link text-warning pr-lg-5 pr-xl-5" id="homefit" href="?action=start&type=default">HomeFit
                     <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item text-warning pl-lg-5 pl-xl-5 pt-2 menu">Добро пожаловать
-                <a class="btn "><?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] : '' ?></a>
-            </li>
+            <!--            <li class="nav-item text-warning pl-lg-5 pl-xl-5 pt-2 menu">Добро пожаловать-->
+            <!--                <a class="btn ">-->
+            <? //= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] : '' ?><!--</a>-->
+            <!--            </li>-->
             <li class="nav-item<?= $controllerType == 'diaryid' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=show&type=diaryid">План
-                    тренировок</a>
+                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=show&type=diaryid">Plan of
+                    Worcouts</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu" href="#" id="navbarDropdown"
                    role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Упражнения
+                    Exercises
                 </a>
                 <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
                     <a class="dropdown-item text-warning menu" href="?action=show&type=planka">Планка</a>
@@ -32,8 +33,14 @@
                 </div>
             </li>
 
-            <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=logout&type=auth">Выйти</a>
+            <li class="nav-item dropdown float-md-right ">
+                <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu" id="name" href="#" id="navbarDropdown"
+                   role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] : '' ?> </a>
+                <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-warning menu" href="?action=logout&type=auth">Exit</a>
+                </div>
             </li>
 
     </div>
