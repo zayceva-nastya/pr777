@@ -47,4 +47,9 @@ class UsersModel extends DbEntity
         }
         return $result;
     }
+    public function loginExists(string $login)
+    {
+        return (bool) $this
+            ->runSQL("SELECT COUNT(*) AS C FROM `users` WHERE login='$login'")[0]['C'];
+    }
 }
