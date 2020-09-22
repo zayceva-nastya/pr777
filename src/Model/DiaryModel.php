@@ -29,7 +29,7 @@ class DiaryModel extends DbEntity
 //            ->setSelect('`diary`.`id`,`diary`.`exercise`, `diary`.`lead_time`,`diary`.`date`, `diary`.`users_id`, `users`.`login` AS users_id')
             ->setFrom('`users`,`diary`')
             ->setWhere("`users`.`id` = `diary`.`users_id`  AND `diary` . `users_id` = $user_id")
-            ->setOrderBy('`diary`.`id`')
+            ->setOrderBy('`diary`.`id`DESc')
             ->getPage($page);
     }
 

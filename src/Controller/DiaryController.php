@@ -55,7 +55,7 @@ class DiaryController extends AbstractTableController
                 'table' => $this
                     ->table
                     ->reset()
-                    ->setPageSize(Config::PAGE_SIZE)
+                    ->setPageSize(Config::PAGE_SIZE_ADMIN)
                     ->getDiaryPage($data['get']['page'] ?? 1)
             ]
         );

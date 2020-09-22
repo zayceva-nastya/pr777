@@ -1,10 +1,12 @@
 .table td {
     border: 2px solid black;
+    color: goldenrod;
 }
 
 .table {
     border-collapse: collapse;
     background-color: black;
+
 }
 
 .img {
@@ -28,14 +30,16 @@
 }
 
 .form input[type='submit'] {
-    width: 100px;
-    background-color: red;
-    margin: 20px;
+  margin-left: 33%;
+    width: 30%;
 }
 
 .form {
-    margin: 20px;
+    margin: auto;
+    margin-top: 3%;
+    width: 20%;
     padding: 25px;
+    background-color: rgba(0, 0, 0, 0.9) !important; ;
 }
 
 .guestbookform label {
@@ -98,9 +102,11 @@
 }
 
 .pagination {
-    position: sticky;
+  /*  position: fixed;*/
     left: 90%;
-    bottom: 10%;
+    bottom: 2%;
+    font-size: 3rem!important;
+    color: goldenrod!important;
 }
 
 #a
@@ -123,6 +129,9 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
+}
+select option{
+    display: block;
 }
 
 #formDiaryOk {
@@ -157,12 +166,14 @@
 
 .hello {
     text-align: center;
+    color: goldenrod;
     padding-top: 2%;
     height: 40%;
     width: 40%;
     margin: auto;
     margin-top: 10%;
-    background-color: rgba(0, 0, 0, 0.9) !important;
+    /*border: 1px solid white;*/
+    /*background-color: rgba(0, 0, 0, 0.9) !important;*/
 }
 
 #boxButton {
@@ -201,14 +212,15 @@
 
 .tableworkots {
     color: goldenrod;
-    margin: 0% 2% !important;
-    margin-right: 2%;
+    margin-right: 20px;
     height: 100%;
     width: 100%;
 }
 
 .tableworkots tr {
     background-color: rgba(0, 0, 0, 0.9) !important;
+    margin-left: 0%;
+   /* margin-right: 2% !important;*/
     border: 1px solid white;
     display: block;
     display: grid;
@@ -219,6 +231,12 @@
     "lead_time pull gifs";
 
 }
+/*ul li:last-child{*/
+/*    margin-left: 20% !important;*/
+/*}*/
+/*ul{*/
+/*    margin-right: 2% !important;*/
+/*}*/
 
 .exercise {
     grid-area: exercise;
@@ -326,6 +344,7 @@ table {
 .boxTableDiary {
     height: 50%;
     width: 100%;
+    margin-bottom: 1%;
 }
 
 .gridBox {
@@ -336,5 +355,9 @@ table {
 
 .box1, .box2, .box3, .box4, .box5 {
     /*background-color: rgba(0, 0, 0, 0.9) !important;*/
+}
+.icons{
+    height: 40px;
+    width: 40px;
 }
 

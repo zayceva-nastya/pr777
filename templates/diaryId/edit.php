@@ -31,5 +31,5 @@ foreach ($fields as $name => $value) {
 }
 
 echo $form->addContent(Html::create('Input')->setType('hidden')->setName('id')->setValue($id)->html())
-    ->addContent(Html::create('Input')->setType('submit')->setValue('OK')->html())
+    ->addContent(Html::create('Input')->setType('submit')->setClass('start')->setValue('OK')->html())
     ->html();

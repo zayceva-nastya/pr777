@@ -17,14 +17,15 @@
             <? //= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] : '' ?><!--</a>-->
             <!--            </li>-->
             <li class="nav-item<?= $controllerType == 'diaryid' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=show&type=diaryid">Plan of
+                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu media" href="?action=show&type=diaryid">
+                    <img class="icons" src="../public/image/plan.png">Plan of
                     Worcouts</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu" href="#" id="navbarDropdown"
+                <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu media" href="#" id="navbarDropdown"
                    role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Exercises
+                    <img class="icons" src="../public/image/exerc2.jpg">Exercises
                 </a>
                 <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
                     <a class="dropdown-item text-warning menu" href="?action=show&type=planka">Планка</a>
@@ -34,12 +35,15 @@
             </li>
 
             <li class="nav-item dropdown float-md-right ">
-                <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu" id="name" href="#" id="navbarDropdown"
+                <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu media" id="name" href="#"
+                   id="navbarDropdown"
                    role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] : '' ?> </a>
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="icons"
+                                                                                          src="../public/image/i.jpg">
+                    <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] : '' ?> </a>
                 <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-warning menu" href="?action=logout&type=auth">Exit</a>
+                    <a class="dropdown-item text-warning menu" href="?action=logout&type=auth">
+                        <img class="icons" src="../public/image/exit.jpg">Exit</a>
                 </div>
             </li>
 
