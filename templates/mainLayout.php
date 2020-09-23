@@ -8,10 +8,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitMyCross</title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Satisfy&display=swap" rel="stylesheet">
+<style>
+    #shadow {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    #addButton {
+        background-color: rgb(0, 139, 139) !important;
+        border: black;
+        color: black !important;
+        margin-left: 3%;
+    }
+</style>
 </head>
 
 <body class="mainStr">

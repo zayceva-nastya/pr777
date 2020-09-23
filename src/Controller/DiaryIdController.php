@@ -30,7 +30,11 @@ class DiaryIdController extends DiaryController
                         ->table
                         ->reset()
                         ->setPageSize(Config::PAGE_SIZE_DIARY)
-                        ->diaryUserFilter($data['get']['page'] ?? 1, $_SESSION['user']['id'])
+                        ->diaryUserFilter($data['get']['page'] ?? 1, $_SESSION['user']['id']),
+                    'fields' => array_diff($this->table->getColumnsNames(), ['id']),
+                    'comments' => $this->table->getColumnsComments(),
+                    'type' => $this->getClassName(),
+                    'pageCount' => $this->table->pageCountDiary($_SESSION['user']['id'])
                 ]
             );
     }

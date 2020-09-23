@@ -9,7 +9,7 @@
 
         <ul class="navbar-nav mr-auto">
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pr-lg-5 pr-xl-5" id="homefit" href="?action=start&type=default">HomeFit
+                <a class="nav-link  pr-lg-5 pr-xl-5 homefit"  href="?action=start&type=default">HomeFit
                     <span class="sr-only">(current)</span></a>
             </li>
             <!--            <li class="nav-item text-warning pl-lg-5 pl-xl-5 pt-2 menu">Добро пожаловать-->
@@ -17,32 +17,32 @@
             <? //= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] : '' ?><!--</a>-->
             <!--            </li>-->
             <li class="nav-item<?= $controllerType == 'diaryid' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu media" href="?action=show&type=diaryid">
+                <a class="nav-link  pl-lg-5 pl-xl-5 menu media" href="?action=show&type=diaryid">
                     <img class="icons" src="../public/image/plan.png">Plan of
                     Worcouts</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu media" href="#" id="navbarDropdown"
+                <a class="nav-link dropdown-toggle pl-lg-5 pl-xl-5 menu media" href="#" id="navbarDropdown"
                    role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="icons" src="../public/image/exerc2.jpg">Exercises
                 </a>
                 <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-warning menu" href="?action=show&type=planka">Планка</a>
-                    <a class="dropdown-item text-warning menu" href="?action=show&type=rasminka">Разминка</a>
-                    <a class="dropdown-item text-warning menu" href="?action=show&type=press">Пресс</a>
+                    <a class="dropdown-item  menu" href="?action=show&type=planka">Планка</a>
+                    <a class="dropdown-item  menu" href="?action=show&type=rasminka">Разминка</a>
+                    <a class="dropdown-item  menu" href="?action=show&type=press">Пресс</a>
                 </div>
             </li>
 
             <li class="nav-item dropdown float-md-right ">
-                <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu media" id="name" href="#"
+                <a class="nav-link dropdown-toggle  pl-lg-5 pl-xl-5 menu media" id="name" href="#"
                    id="navbarDropdown"
                    role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="icons"
                                                                                           src="../public/image/i.jpg">
                     <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] : '' ?> </a>
                 <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-warning menu" href="?action=logout&type=auth">
+                    <a class="dropdown-item  menu" href="?action=logout&type=auth">
                         <img class="icons" src="../public/image/exit.jpg">Exit</a>
                 </div>
             </li>

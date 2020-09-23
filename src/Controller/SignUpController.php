@@ -28,12 +28,13 @@ class SignUpController extends UsersController
     public function actionAdd(array $data)
     {
         if (!empty($data['post']) && ($data['post']['login'] != '') && ($data['post']['password'] != '')) {
-            if (!$this->table->loginExists($data['post']['login'])) {
+            if (!$this->table->userExists($data['post']['login'])) {
                 $data['post']['group_id'] = $this->table->getGroupIdByCode('user');
                 $this->table->add($data['post']);
                 $this->redirect('?action=loginform&type=auth');
-            }else{
-                $_SESSION['errors'][] = 'KKK';
+            } else {
+                $_SESSION['errors'][] = "Такой логин существует";
+                $this->redirect('?action=show&type=signup');
             }
         } else {
             $this->redirect('?action=show&type=signup');

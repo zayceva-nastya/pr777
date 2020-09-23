@@ -1,6 +1,10 @@
+:root{
+    --rgb:rgb(102, 205, 170);
+    --backgr:rgba(0, 0, 0, 0.9);
+}
 .table td {
     border: 2px solid black;
-    color: goldenrod;
+    color: var(--rgb);
 }
 
 .table {
@@ -39,7 +43,7 @@
     margin-top: 3%;
     width: 20%;
     padding: 25px;
-    background-color: rgba(0, 0, 0, 0.9) !important; ;
+    background-color: var(--backgr);
 }
 
 .guestbookform label {
@@ -103,10 +107,30 @@
 
 .pagination {
   /*  position: fixed;*/
-    left: 90%;
-    bottom: 2%;
-    font-size: 3rem!important;
-    color: goldenrod!important;
+  /*  left: 90%;*/
+  /*  bottom: 2%;*/
+  /*  font-size: 3rem!important;*/
+  /*  color: var(--rgb)!important;*/
+    position:absolute;
+    left:50%;
+    top:90%;
+    display: flex;
+    justify-content: center;
+}
+/*нумерация*/
+.pagination a {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid rgb(0, 139, 139);
+    border-radius: 50%;
+    margin-right: 10px;
+    color: black;
+}
+
+.pagination a:hover {
+    background-color: rgba(0, 139, 139, 0.5);
+    text-decoration: none;
+    /*transition: all 0.7s ease 0s;*/
 }
 
 #a
@@ -122,14 +146,15 @@
     } */
 #shadow {
     position: fixed;
-    padding: 20px;
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    color: red;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
 }
+
 select option{
     display: block;
 }
@@ -144,13 +169,15 @@ select option{
 
 
 #addButton {
-    background-color: rgb(255, 255, 102);
+    background-color: rgb(255, 255, 102) !important;
     border: black;
+    color: black !important;
+    margin-left: 3%;
 }
 
 .logAlert {
     /* border: 1px solid red !important; */
-    background-color: rgb(238, 140, 140);
+    background-color: rgb(0, 139, 139);
 
 }
 
@@ -166,7 +193,7 @@ select option{
 
 .hello {
     text-align: center;
-    color: goldenrod;
+    color: var(--rgb);
     padding-top: 2%;
     height: 40%;
     width: 40%;
@@ -190,7 +217,7 @@ select option{
 .mainStr {
     height: 100%;
     width: 100%;
-    color: yellow;
+    color: var(--rgb);
     background-image: url("../image/hello.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -199,26 +226,27 @@ select option{
 .planeLayout {
     height: 100vh;
     width: 100vw;
-    color: yellow;
+    color: var(--rgb);
     background-image: url("../image/plane.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#homefit {
+.homefit {
     font-family: Satisfy !important;
-    font-size: 2rem;
+    font-size: 2rem!important;
+    color: var(--rgb) !important;
 }
 
 .tableworkots {
-    color: goldenrod;
+    color: var(--rgb);
     margin-right: 20px;
     height: 100%;
     width: 100%;
 }
 
 .tableworkots tr {
-    background-color: rgba(0, 0, 0, 0.9) !important;
+    background-color: var(--backgr) !important;
     margin-left: 0%;
    /* margin-right: 2% !important;*/
     border: 1px solid white;
@@ -285,7 +313,7 @@ select option{
 .boxTableWorkouts {
     height: 150%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9) !important;
+    background-color: var(--backgr) !important;
     margin-top: 0%;
 }
 
@@ -294,6 +322,7 @@ select option{
     font-family: 'Cinzel', serif;
     font-size: 1.5rem;
     opacity: 0.7;
+    color: var(--rgb) !important;
 
 }
 
@@ -306,27 +335,29 @@ table {
 }
 
 .tableDiary th {
-    color: goldenrod !important;
+    color: var(--rgb) !important;
 }
 
 .tableDiary td, .tableDiary th {
-    background-color: rgba(0, 0, 0, 0.9) !important;
+    background-color: var(--backgr) !important;
     color: white;
     text-align: center;
+    border-bottom: 1px solid white;
 
 }
 
 .tableDiary tr {
     font-size: 2rem;
+    width: 100%;
 }
 
 .bar {
-    background-color: rgba(0, 0, 0, 0.3) !important;
+    background-color: var(--backgr) !important;
 
 }
 
 #diaryBut {
-    height: 30%;
+    height: 10%;
     width: 100%;
     font-size: 2rem;
     padding: 20%;
@@ -342,19 +373,40 @@ table {
 }
 
 .boxTableDiary {
-    height: 50%;
+    height: 70%;
     width: 100%;
     margin-bottom: 1%;
 }
 
 .gridBox {
+    background-color: var(--backgr) !important;
     display: grid;
     grid-template-columns:2fr 2fr 2fr;
+    grid-template-areas:
+    "box1 box1 box1 "
+    "box2 box2 box3 "
+    "lead_time pull gifs";
     padding: 1%;
+}
+.box1{
+    grid-area: box1;
+    font-size: 2rem;
+    text-align: center;
+}
+.box2{
+    grid-area: box2;
+    font-size: 2rem;
+    text-align: center;
+}
+.box3{
+
 }
 
 .box1, .box2, .box3, .box4, .box5 {
     /*background-color: rgba(0, 0, 0, 0.9) !important;*/
+}
+#mainStrImg{
+    width: 100%;
 }
 .icons{
     height: 40px;

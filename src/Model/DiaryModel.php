@@ -38,4 +38,9 @@ class DiaryModel extends DbEntity
         $data = date('Y-m-d H:i:s');
         $this->runSQL("INSERT INTO `diary` (`id`, `exercise`, `lead_time`, `users_id`) VALUES ( Null,'$exercise',1,$users_id)");
     }
+    public function pageCountDiary(int $users_id)
+    {
+//        print_r($this->runSQL("SELECT COUNT(*) as count FROM application, users WHERE `users`.`id` = `application`.`users_id` AND `application` . `users_id` = $user_id"));
+        return ceil($this->runSQL("SELECT COUNT(*) as count FROM diary, users WHERE `users`.`id` = `diary`.`users_id` AND `diary` . `users_id` = $users_id")[0]['count'] / $this->pageSize);
+    }
 }

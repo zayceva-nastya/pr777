@@ -65,10 +65,6 @@ if (empty($table)) {
     <label> <?= $comments['lead_time'] ?>
         <input type="text" name="lead_time">
     </label>
-    <!--    <label> --><?php //= $comments['date'] ?>
-    <!--        <input class="ml-7" type="text" name="date">-->
-    <!--    </label>-->
-
     <input type="hidden" name="users_id" value="<?= $user_id ?>">
 
     <input id="formDiaryOk" type="submit" value="Добавить">
@@ -83,16 +79,19 @@ if (empty($table)) {
 </head>
 
 <body>
-<a class="btn btn-primary" id="addButton">➕➕➕</a>
+<a class="btn btn-primary" id="addButton">Add Exercise</a>
 <a id="closeFormButton"></a>
 <div id="shadow" class="hidden"></div>
 
 </body>
 <?php
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
+if ($pageCount > 1) {
+    echo Html::create("Pagination")
+        ->setClass('pagination')
+        ->setControllerType($type)
+        ->setPageCount($pageCount)
+        ->html();
+}
+
 ?>
 </html>
