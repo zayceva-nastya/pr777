@@ -1,7 +1,9 @@
-:root{
-    --rgb:rgb(102, 205, 170);
-    --backgr:rgba(0, 0, 0, 0.9);
+:root {
+    --rgb: rgb(102, 205, 170);
+    --backgr: rgba(0, 0, 0, 0.9);
+    --fontMain:Satisfy;
 }
+
 .table td {
     border: 2px solid black;
     color: var(--rgb);
@@ -34,7 +36,7 @@
 }
 
 .form input[type='submit'] {
-  margin-left: 33%;
+    margin-left: 33%;
     width: 30%;
 }
 
@@ -106,17 +108,18 @@
 }
 
 .pagination {
-  /*  position: fixed;*/
-  /*  left: 90%;*/
-  /*  bottom: 2%;*/
-  /*  font-size: 3rem!important;*/
-  /*  color: var(--rgb)!important;*/
-    position:absolute;
-    left:50%;
-    top:90%;
+    /*  position: fixed;*/
+    /*  left: 90%;*/
+    /*  bottom: 2%;*/
+    /*  font-size: 3rem!important;*/
+    /*  color: var(--rgb)!important;*/
+    position: absolute;
+    left: 50%;
+    top: 90%;
     display: flex;
     justify-content: center;
 }
+
 /*нумерация*/
 .pagination a {
     display: inline-block;
@@ -155,7 +158,7 @@
     /*background-color: rgba(0, 0, 0, 0.7);*/
 }
 
-select option{
+select option {
     display: block;
 }
 
@@ -234,7 +237,7 @@ select option{
 
 .homefit {
     font-family: Satisfy !important;
-    font-size: 2rem!important;
+    font-size: 2rem !important;
     color: var(--rgb) !important;
 }
 
@@ -248,7 +251,7 @@ select option{
 .tableworkots tr {
     background-color: var(--backgr) !important;
     margin-left: 0%;
-   /* margin-right: 2% !important;*/
+    /* margin-right: 2% !important;*/
     border: 1px solid white;
     display: block;
     display: grid;
@@ -259,6 +262,7 @@ select option{
     "lead_time pull gifs";
 
 }
+
 /*ul li:last-child{*/
 /*    margin-left: 20% !important;*/
 /*}*/
@@ -379,37 +383,116 @@ table {
 }
 
 .gridBox {
-    background-color: var(--backgr) !important;
+    /*background-color: rgba(213, 214, 219,0.9) !important;*/
+    /*background-color: var(--backgr) !important;*/
+    background: linear-gradient(to bottom,rgb(87,87,87),rgba(16,9,9,0.5));
+    font-family: var(--fontMain) !important;
     display: grid;
+    margin: 3% 5% 0% 5%;
     grid-template-columns:2fr 2fr 2fr;
     grid-template-areas:
-    "box1 box1 box1 "
-    "box2 box2 box3 "
+    "box1 box1 box2"
+    "box3 box3 box2  "
     "lead_time pull gifs";
     padding: 1%;
 }
-.box1{
+
+.box1 {
     grid-area: box1;
     font-size: 2rem;
     text-align: center;
+    color: red!important;
 }
-.box2{
+
+.box2 {
     grid-area: box2;
-    font-size: 2rem;
+
     text-align: center;
 }
-.box3{
 
+.box3 {
+    grid-area: box3;
+    /*border: 1px solid white;*/
+    font-size: 2rem;
+    color: white;
+    padding: 1%;
 }
 
-.box1, .box2, .box3, .box4, .box5 {
-    /*background-color: rgba(0, 0, 0, 0.9) !important;*/
+.box3 img
+{
+    margin-right: 2%;
+    height: 50px!important;
+    width: 50px!important;
 }
-#mainStrImg{
-    width: 100%;
+
+#mainStrImg {
+   width: 100%;
+    height: 100%;
 }
-.icons{
+
+.icons {
     height: 40px;
     width: 40px;
 }
 
+/*#mainLogo  {*/
+/*    font-size: 1rem!important;*/
+/*    color: yellow!important;*/
+/*    animation-name: mainLogo!important;*/
+/*    animation-duration: 5s!important;*/
+/*    animation-delay: 5s!important;*/
+/*    animation-iteration-count: infinite!important;*/
+/*    animation-timing-function: linear!important;*/
+/*}*/
+
+/*@keyframes mainLogo {*/
+/*    0% {*/
+/*        font-size: 1rem!important;*/
+/*        color: red!important;*/
+/*    }*/
+/*    100% {*/
+/*        font-size: 2rem!important;*/
+/*        color: yellow!important;*/
+/*    }*/
+/*}*/
+.foot{
+    /*background-color: var(--backgr);*/
+    background: linear-gradient(to bottom,rgba(16,9,9,0.5),rgb(87,87,87));
+    font-family: Cinzel;
+    margin: 0% 5%;
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns:2fr 2fr 2fr;
+    grid-template-areas:
+    "randExerc randExerc randExerc"
+    "workout1 workout2 workout3";
+    padding: 1%;
+}
+.randplan{
+    grid-area: randExerc;
+    text-align: center;
+}
+.workout1{
+    grid-area: workout1;
+}
+.workout2{
+    grid-area: workout2;
+}
+.workout3{
+    grid-area: workout3;
+}
+.foot a{
+    display: block;
+    text-decoration: none!important;
+    color: var(--rgb);
+}
+.foot a:hover{
+    /*color: rgba(0, 139, 139, 0.5);*/
+    color: red;
+    /*text-decoration: none;*/
+    transition: all 0.7s ease 0s;
+}
+.default{
+    height: 100%;
+    width: 100%;
+}

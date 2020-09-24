@@ -1,26 +1,25 @@
-<div class="gridBox" >
-    <div class="bg-black box1"><span class="homefit">HomeFit</span>
-    </div><br>
-    <div class="box2">Get in shape with us
-    </div><br>
-    <div class="box3"><img id="mainStrImg" src="../public/image/girlwoter.jpg">
-    </div><br>
-
-    <div class="box4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus exercitationem fuga possimus quis
-        repellat tenetur. Aliquam assumenda natus non omnis. Amet ex nam reiciendis similique soluta unde voluptatibus
-        voluptatum!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus exercitationem fuga possimus quis
-        repellat tenetur. Aliquam assumenda natus non omnis. Amet ex nam reiciendis similique soluta unde voluptatibus
-        voluptatum!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus exercitationem fuga possimus quis
-        repellat tenetur. Aliquam assumenda natus non omnis. Amet ex nam reiciendis similique soluta unde voluptatibus
-        voluptatum!
-    </div><br>
-
-    <div class="box5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus exercitationem fuga possimus quis
-        repellat tenetur. Aliquam assumenda natus non omnis. Amet ex nam reiciendis similique soluta unde voluptatibus
-        voluptatum!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus exercitationem fuga possimus quis
-        repellat tenetur. Aliquam assumenda natus non omnis. Amet ex nam reiciendis similique soluta unde voluptatibus
-        voluptatum!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus exercitationem fuga possimus quis
-        repellat tenetur. Aliquam assumenda natus non omnis. Amet ex nam reiciendis similique soluta unde voluptatibus
-        voluptatum!
+<div class="default"><div class="gridBox">
+    <div class="bg-black box1">HomeFit
+        <div>Get in shape with us</div>
     </div>
+    <div class="box2"><img id="mainStrImg" src="../public/image/devushka-beg-cvet.jpg">
+    </div>
+    <br>
+    <div class="box3">
+        <div class="media"><img class="icons" src="../public/image/clock.png">
+            <p>Save time and money! Study at home!</p>
+        </div>
+        <div class="media"><img class="icons" src="../public/image/stanga.jpg">
+            <p>Create your own plan.Do what you like!</p></div>
+        <div class="media"><img class="icons" src="../public/image/child.png">
+            <p>Let's make this world healthier and more beautiful!</p></div>
+    </div>
+    <div class="box4">We always welcome new guests!</div>
+</div>
+<div class="foot"><p class="randplan">Don't know where to start? Let us help you! Keep three trial training
+        sessions for the beginner!</p>
+    <a class="workout1" href='?action=plana&type=diaryid'>WORKOUTS 1</a>
+    <a class="workout2" href='?action=planb&type=diaryid'>WORKOUTS 2</a>
+    <a class="workout3" href='?action=planc&type=diaryid'>WORKOUTS 3</a>
+</div>
 </div>

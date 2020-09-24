@@ -53,14 +53,36 @@ class DiaryIdController extends DiaryController
             ]
         );
     }
+
     public function actionAddExercise(array $data)
     {
-//        print_r($data);
-//        print_r($_SESSION);
         $users_id = $_SESSION['user']['id'];
+        /** @var string $exerxise */
         $exerxise = $data['get']['exercise'];
 
         $this->table->getAddExercise($users_id, $exerxise);
+        $this->redirect('?action=show&type=DiaryId');
+    }
+
+    public function actionPlanA()
+    {
+        $users_id = $_SESSION['user']['id'];
+
+        $this->table->randPlan1($users_id);
+        $this->redirect('?action=show&type=DiaryId');
+    }
+    public function actionPlanB()
+    {
+        $users_id = $_SESSION['user']['id'];
+
+        $this->table->randPlan2($users_id);
+        $this->redirect('?action=show&type=DiaryId');
+    }
+    public function actionPlanC()
+    {
+        $users_id = $_SESSION['user']['id'];
+
+        $this->table->randPlan3($users_id);
         $this->redirect('?action=show&type=DiaryId');
     }
 }
