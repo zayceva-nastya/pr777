@@ -5,6 +5,8 @@
 
 <div class="container">
     <form action="<?=$action?>" method="post" id="authform">
+        <div class="text-center homefit">HomeFit</div>
+        <div class="text-white text-center">Authorization</div>
         <div class="form-group">
             <label for="exampleInputEmail1">Login</label>
             <input type="text" class="form-control" name="login" id="login">

@@ -68,9 +68,9 @@ echo $form->html();
 </head>
 
 <body>
-    <a class="btn btn-primary" id="addButton2">➕➕➕</a>
-    <a  id="closeFormButton2"></a>
-    <div id="shadow2" class="hidden"></div>
+<!--    <a class="btn btn-primary" id="addButton2">➕➕➕</a>-->
+<!--    <a  id="closeFormButton2"></a>-->
+<!--    <div id="shadow2" class="hidden"></div>-->
 
 </body>
 <?php

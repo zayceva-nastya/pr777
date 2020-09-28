@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bar">
+<nav class="navbar navbar-expand-lg navbar-light bar bg-dark">
     <!--    <a class="navbar-brand" href="#">Navbar</a>-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,11 +8,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pr-lg-5 pr-xl-5" id="homefit" href="?action=start&type=default">HomeFit <span class="sr-only">(current)</span></a>
+            <li class="menuAdm nav-item<?= $controllerType == '' ? ' active' : '' ?>">
+                <a class="nav-link text-warning pr-lg-5 pr-xl-5 homefit" id="homefit" href="?action=start&type=default">HomeFit <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item<?= $controllerType == 'diary' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=show&type=diary">Активность</a>
+                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=show&type=diary">Activity</a>
             </li>
 <!--            <li class="nav-item dropdown">-->
 <!--                <a class="nav-link dropdown-toggle text-warning pl-lg-5 pl-xl-5 menu" href="#" id="navbarDropdown" role="button"-->
@@ -38,7 +38,7 @@
                 <a class="nav-link" href="?action=loginform&type=auth">Login</a>
             </li> -->
             <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=logout&type=auth">Выйти</a>
+                <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=logout&type=auth">Exit</a>
             </li>
 
 <!--            <span class="navbar-text text-warning">-->

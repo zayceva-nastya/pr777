@@ -134,30 +134,31 @@ abstract class AbstractTableController extends AbstractController implements CRU
         $this->redirect('?action=show&type=' . $this->getClassName());
     }
 
-    public function actionchecklogin(array $data){
-    header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
-    header('Cache-Control: no-store, no-cache, must-revalidate');
-    header('Cache-Control: post-check=0, pre-check=0', FALSE);
-    header('Pragma: no-cache');
+    public function actionchecklogin(array $data)
+    {
+        header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
+        header('Cache-Control: no-store, no-cache, must-revalidate');
+        header('Cache-Control: post-check=0, pre-check=0', FALSE);
+        header('Pragma: no-cache');
 
-    $authModel = new AuthModel(
-        "users",
-        DB::Link([
-            'host' => Config::MYSQL_HOST,
-            'username' => Config::MYSQL_USER_NAME,
-            'password' => Config::MYSQL_PASSWORD,
-            'dbname' => Config::MYSQL_DATABASE
-        ])
-    );
-    if ($authModel->loginExists($data['get']['login']) && !empty($data['get']['login'])) {
-        echo json_encode(["response" => "Yes"]);
-    } else {
-        echo json_encode(["response" => "No"]);
+        $authModel = new AuthModel(
+            "users",
+            DB::Link([
+                'host' => Config::MYSQL_HOST,
+                'username' => Config::MYSQL_USER_NAME,
+                'password' => Config::MYSQL_PASSWORD,
+                'dbname' => Config::MYSQL_DATABASE
+            ])
+        );
+        if ($authModel->loginExists($data['get']['login']) && !empty($data['get']['login'])) {
+            echo json_encode(["response" => "Yes"]);
+        } else {
+            echo json_encode(["response" => "No"]);
+        }
+        // echo json_encode(["response" => $authModel->checkLoginExists($data['get']['login'])]);
+        exit();
+
     }
-    // echo json_encode(["response" => $authModel->checkLoginExists($data['get']['login'])]);
-    exit();
-
-}
     // {
 //         header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
 //         header('Cache-Control: no-store, no-cache, must-revalidate');

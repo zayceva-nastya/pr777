@@ -58,6 +58,17 @@ if (empty($table)) {
 
 //print_r($usersList);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
 <form action="?action=add&type=<?= $type ?>" method="post" class="hidden" id="addForm">
     <label> <?= $comments['exercise'] ?>
         <input class="ml-5" type="text" name="exercise">
@@ -69,29 +80,23 @@ if (empty($table)) {
 
     <input id="formDiaryOk" type="submit" value="Добавить">
 </form>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-<a class="btn btn-primary" id="addButton">Add Exercise</a>
-<a id="closeFormButton"></a>
-<div id="shadow" class="hidden"></div>
-
-</body>
 <?php
+if (!empty($table)) {
+    echo "<a class=\"btn btn-primary\" id=\"addButton\">Add Exercise</a>
+<a id=\"closeFormButton\"></a>
+<div id=\"shadow\" class=\"hidden\"></div>";
+}
+
+
 if ($pageCount > 1) {
     echo Html::create("Pagination")
-        ->setClass('pagination')
+        ->setClass('pagination2')
         ->setControllerType($type)
         ->setPageCount($pageCount)
         ->html();
 }
 
 ?>
+</body>
+
 </html>

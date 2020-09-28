@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
+            <li class="menuAdm nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                 <a class="nav-link  pr-lg-5 pr-xl-5 homefit"  href="?action=start&type=default">HomeFit
                     <span class="sr-only">(current)</span></a>
             </li>

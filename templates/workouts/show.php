@@ -18,12 +18,12 @@ foreach ($table as &$row) {
 }
 //print_r($table);
 echo
-    Html::create('TableforAddExercise')
-        //->setHeaders($comments)
-        ->data($table)
-        ->setClass('tableworkots')
+Html::create('TableforAddExercise')
+    //->setHeaders($comments)
+    ->data($table)
+    ->setClass('tableworkots')
 //    ->setClass('tableworkots2')
-        ->html();
+    ->html();
 
 
 //echo TexLab\Html\Html::table()
@@ -32,11 +32,13 @@ echo
 //  ->removeColumns([1 => 'id',2 => 'group_id'])
 //->html();
 
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
+echo "<div>" .
+    Html::create("Pagination")
+        ->setClass('pagination')
+        ->setControllerType($type)
+        ->setPageCount($pageCount)
+        ->html()
+."</div>";
 
 
 //$form = Html::create('Form')
