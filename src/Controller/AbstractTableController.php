@@ -51,7 +51,7 @@ abstract class AbstractTableController extends AbstractController implements CRU
                 'table' => $this
                     ->table
                     ->reset()
-                    ->setPageSize(Config::PAGE_SIZE)
+                    ->setPageSize(Config::PAGE_SIZE_ADMIN)
                     ->getPage($data['get']['page'] ?? 1),
                 'fields' => array_diff($this->table->getColumnsNames(), ['id']),
                 'comments' => $this->table->getColumnsComments(),

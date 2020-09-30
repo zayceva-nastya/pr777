@@ -65,14 +65,17 @@ echo Html::create('TableEdited')
 <!--<a class="btn btn-primary" id="addButton">➕➕➕</a>-->
 <!--<a id="closeFormButton"></a>-->
 <!--<div id="shadow" class="hidden"></div>-->
+<?php
+if ($pageCount >= 1) {
+    echo Html::create("Pagination")
+        ->setClass('pagination')
+        ->setControllerType($type)
+        ->setPageCount($pageCount)
+        ->html();
+}
 
+?>
 </body>
 
 </html>
-<?php
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
-?>
+

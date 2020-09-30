@@ -28,7 +28,7 @@ class DiaryModel extends DbEntity
             ->setSelect('`diary`.`id`, `diary`.`exercise`, `diary`.`lead_time`')
             ->setFrom('`users`,`diary`')
             ->setWhere("`users`.`id` = `diary`.`users_id`  AND `diary` . `users_id` = $user_id")
-            ->setOrderBy('`diary`.`id`DESc')
+            ->setOrderBy('`diary`.`id`DESC')
             ->getPage($page);
     }
 
@@ -40,7 +40,7 @@ class DiaryModel extends DbEntity
 
     public function randPlan1(int $users_id)
     {
-        $this->runSQL("INSERT INTO `diary` (`id`, `exercise`, `lead_time`, `users_id`) VALUES( Null,'Классическая планка на логтях ','30 сек',$users_id),( Null,'Обратные скручивания','10 повторений',$users_id), ( Null,'Ходьба на месте','10 мин',$users_id)");
+        $this->runSQL("INSERT INTO `diary` (`id`, `exercise`, `lead_time`, `users_id`) VALUES( Null,'Классическая планка на локтях ','30 сек',$users_id),( Null,'Обратные скручивания','10 повторений',$users_id), ( Null,'Ходьба на месте','10 мин',$users_id)");
     }
     public function randPlan2(int $users_id)
     {

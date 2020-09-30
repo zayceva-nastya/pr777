@@ -26,7 +26,7 @@ if (empty($table)) {
     echo "<div class='boxTableDiary'>" .
         Html::create('TableEdited2')
             ->setControllerType($type)
-            ->setHeaders([1 => '№', 2 => 'Упражнение', 3 => 'Количество повторений'])
+//            ->setHeaders([1 => '№', 2 => 'Упражнение', 3 => 'Количество повторений'])
             ->data($table)
             ->setClass('tableDiary')
             ->html()
@@ -59,23 +59,13 @@ if (empty($table)) {
 //print_r($usersList);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
 <form action="?action=add&type=<?= $type ?>" method="post" class="hidden" id="addForm">
     <label> <?= $comments['exercise'] ?>
-        <input class="ml-5" type="text" name="exercise">
-    </label>
+
+    </label> <input class="" type="text" name="exercise">
     <label> <?= $comments['lead_time'] ?>
-        <input type="text" name="lead_time">
-    </label>
+
+    </label> <input type="text" name="lead_time">
     <input type="hidden" name="users_id" value="<?= $user_id ?>">
 
     <input id="formDiaryOk" type="submit" value="Добавить">
@@ -97,6 +87,4 @@ if ($pageCount > 1) {
 }
 
 ?>
-</body>
 
-</html>

@@ -28,4 +28,5 @@ class AuthModel extends DbEntity
             ->addWhere("BINARY `users`.`login`= '$login'")
             ->get()[0]['C'];
     }
+
 }

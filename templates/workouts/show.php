@@ -38,7 +38,7 @@ echo "<div>" .
         ->setControllerType($type)
         ->setPageCount($pageCount)
         ->html()
-."</div>";
+    . "</div>";
 
 
 //$form = Html::create('Form')

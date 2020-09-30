@@ -9,7 +9,7 @@
 
         <ul class="navbar-nav mr-auto">
             <li class="menuAdm nav-item<?= $controllerType == '' ? ' active' : '' ?>">
-                <a class="nav-link text-warning pr-lg-5 pr-xl-5 homefit" id="homefit" href="?action=start&type=default">HomeFit <span class="sr-only">(current)</span></a>
+                <a class="nav-link text-warning pr-lg-5 pr-xl-5 homefit" id="homefit" href="">HomeFit <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item<?= $controllerType == 'diary' ? ' active' : '' ?>">
                 <a class="nav-link text-warning pl-lg-5 pl-xl-5 menu" href="?action=show&type=diary">Activity</a>

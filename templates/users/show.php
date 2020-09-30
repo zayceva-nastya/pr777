@@ -25,7 +25,7 @@ echo Html::create('TableEdited')
 $form = Html::create('Form')
     ->setMethod('POST')
     ->setAction("?action=add&type=$type")
-    ->setClass('form')
+    ->setClass('hidden')
     ->setId('addForm2');
 
 foreach ($fields as $field) {
@@ -35,15 +35,6 @@ foreach ($fields as $field) {
         $form->addContent('<br>');
         $form->addContent((new Select())->setName($field)->setId($field)->setData($groupNames)->html());
         $form->addContent('<br>');
-    } elseif ($field == 'Gender') {
-        $form->addContent((new Select())
-            ->setName($field)
-            ->setId($field)
-            ->setData([
-                'women' => 'Ж',
-                'men' => 'М'
-            ])
-            ->html());
     } else {
         $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
     }
@@ -58,21 +49,12 @@ $form->addContent(
 
 echo $form->html();
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <a class="btn btn-primary" id="addButton2">➕➕➕</a>
+<a  id="closeFormButton2"></a>
+<div id="shadow2" class="hidden"></div>
 
-<body>
-<!--    <a class="btn btn-primary" id="addButton2">➕➕➕</a>-->
-<!--    <a  id="closeFormButton2"></a>-->
-<!--    <div id="shadow2" class="hidden"></div>-->
 
-</body>
 <?php
 echo Html::create("Pagination")
 ->setClass('pagination')
