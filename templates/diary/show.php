@@ -8,7 +8,10 @@ use View\Html\Html;
  * @var string $type Имя контроллера
  */
 
-
+if ($_SESSION['errors']['del']) {
+    echo "<div class='error bg-danger'>" . $_SESSION['errors']['del'] . "<a href='?action=show&type=users'>OK</div>";
+    unset($_SESSION['errors']['del']);
+}
 echo Html::create('TableEdited')
     ->setControllerType($type)
     ->setHeaders($comments)
@@ -66,9 +69,9 @@ echo Html::create('TableEdited')
 <!--<a id="closeFormButton"></a>-->
 <!--<div id="shadow" class="hidden"></div>-->
 <?php
-if ($pageCount >= 1) {
+if ($pageCount > 1) {
     echo Html::create("Pagination")
-        ->setClass('pagination')
+        ->setClass('pagination2')
         ->setControllerType($type)
         ->setPageCount($pageCount)
         ->html();

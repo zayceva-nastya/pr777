@@ -36,9 +36,12 @@ $form->addContent(
 );
 
 echo $form->html();
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
+if ($pageCount > 1) {
+    echo Html::create("Pagination")
+        ->setClass('pagination2')
+        ->setControllerType($type)
+        ->setPageCount($pageCount)
+        ->html();
+}
+
 

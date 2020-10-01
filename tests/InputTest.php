@@ -3,15 +3,15 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use View\Html\Textarea;
+use View\Html\Input;
 
 
-class TextareaTest extends TestCase
+class InputTest extends TestCase
 {
 
     public function testHtml()
     {
-$text = new Textarea();
+$text = new Input();
         $this->assertIsString($text->html());
     }
 }

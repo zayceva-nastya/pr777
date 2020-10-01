@@ -11,14 +11,6 @@ use View\Html\Html;
  * @var array $table
  * @var int $user_id
  */
-//print_r($table);
-//
-//echo TexLab\Html\Html::table()
-//    ->setData($table)
-//    ->setHeaders($comments)
-//    ->setClass('tableDiary')
-//    ->removeColumns([1 => 'id', 2 => 'users_id'])
-//    ->html();
 
 if (empty($table)) {
     echo "<div id='diaryBut'>Нажми <a class='btn exerc' href='?action=show&type=planka' >GO</a> чтобы добавить упражнения</div>";
@@ -34,29 +26,6 @@ if (empty($table)) {
 
 }
 
-
-//$form = Html::create('Form')
-//    ->setMethod('POST')
-//    ->setAction("?action=add&type=$type")
-//    ->setClass('form');
-//
-//
-//foreach ($fields as $field) {
-//    $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//    $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-//}
-//
-//$form->addContent(
-//    Html::create('Input')
-//        ->setType('submit')
-//        ->setValue('OK')
-//        ->html()
-//);
-//
-//echo $form->html();
-
-
-//print_r($usersList);
 ?>
 
 <form action="?action=add&type=<?= $type ?>" method="post" class="hidden" id="addForm">
@@ -79,11 +48,13 @@ if (!empty($table)) {
 
 
 if ($pageCount > 1) {
-    echo Html::create("Pagination")
+    echo "<div class='box-page'>".
+    Html::create("Pagination")
         ->setClass('pagination2')
         ->setControllerType($type)
         ->setPageCount($pageCount)
-        ->html();
+        ->html().
+        "</div>";
 }
 
 ?>

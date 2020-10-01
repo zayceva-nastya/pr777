@@ -57,7 +57,7 @@ echo $form->html();
 
 <?php
 echo Html::create("Pagination")
-->setClass('pagination')
+->setClass('pagination2')
 ->setControllerType($type)
 ->setPageCount($pageCount)
 ->html();
