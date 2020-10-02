@@ -48,12 +48,12 @@ if (!empty($table)) {
 
 
 if ($pageCount > 1) {
-    echo "<div class='box-page'>".
-    Html::create("Pagination")
-        ->setClass('pagination2')
-        ->setControllerType($type)
-        ->setPageCount($pageCount)
-        ->html().
+    echo "<div class='box-page'>" .
+        Html::create("Pagination")
+            ->setClass('pagination2')
+            ->setControllerType($type)
+            ->setPageCount($pageCount)
+            ->html() .
         "</div>";
 }
 
