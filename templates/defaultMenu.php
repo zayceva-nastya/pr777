@@ -6,9 +6,7 @@
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item menu<?= $controllerType == '' ? ' active' : '' ?>">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
+               
                 <li class="nav-item menu<?= $controllerType == 'auth' ? ' active' : '' ?>">
                     <a class="nav-link" id="enter" href="?action=loginform&type=auth">SignIn</a>
                 </li>
