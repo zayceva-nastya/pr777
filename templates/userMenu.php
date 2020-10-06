@@ -9,7 +9,9 @@
 
         <ul class="navbar-nav mr-auto">
             <li class="menuAdm nav-item<?= $controllerType == '' ? ' active' : '' ?>">
-                <a class="nav-link  pr-lg-5 pr-xl-5 homefit"  href="?action=start&type=default">HomeFit
+                <a class="nav-link  pr-lg-5 pr-xl-5 homefit"  href="?action=start&type=default"><div class="animate">
+			<span>H</span><span>o</span><span>m</span><span>e</span><span>F</span><span>i</span><span>t</span>
+		</div>
                     <span class="sr-only">(current)</span></a>
             </li>
             <!--            <li class="nav-item text-warning pl-lg-5 pl-xl-5 pt-2 menu">Добро пожаловать-->

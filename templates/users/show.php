@@ -13,10 +13,9 @@ use View\Html\Html;
 // print_r($groupNames);
 
 
-
 echo Html::create('TableEdited')
     ->setControllerType($type)
-    ->setHeaders($comments)
+    ->setHeaders([1 => '№', 2 => 'Пользователь', 3 => 'Группа', 4 => 'ФИО'])
     ->data($table)
     ->setClass('table')
     ->html();
@@ -50,17 +49,17 @@ $form->addContent(
 echo $form->html();
 ?>
 
-  <a class="btn btn-primary" id="addButton2">➕➕➕</a>
-<a  id="closeFormButton2"></a>
+<a class="btn btn-primary" id="addButton2">➕➕➕</a>
+<a id="closeFormButton2"></a>
 <div id="shadow2" class="hidden"></div>
 
 
 <?php
 echo Html::create("Pagination")
-->setClass('pagination2')
-->setControllerType($type)
-->setPageCount($pageCount)
-->html();
+    ->setClass('pagination2')
+    ->setControllerType($type)
+    ->setPageCount($pageCount)
+    ->html();
 //print_r($table);
 ?>
 

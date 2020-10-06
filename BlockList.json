@@ -1,13 +1,17 @@
 {
-    "admin": [],
-    "user": [
-        "group",
-        "users"
-    ],
-    "default": [
-        "group",
-        "users",
-        "Phonebook",
-        "guestbook"
-    ]
+  "admin": [],
+  "user": [
+    "group",
+    "users",
+    "diary"
+  ],
+  "default": [
+    "group",
+    "users",
+    "planka",
+    "rasminka",
+    "press",
+    "diaryid",
+    "diary"
+  ]
 }

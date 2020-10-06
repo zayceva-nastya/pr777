@@ -1,0 +1,806 @@
+:root {
+    --rgb: rgb(2, 186, 237);
+    --backgr: rgba(0, 0, 0, 0.9);
+    --fontMain: Satisfy;
+}
+
+
+/*menu/navbar*/
+.homefit {
+    font-family: Satisfy !important;
+    font-size: 2rem !important;
+    color: var(--rgb) !important;
+}
+
+#addForm label, #signupform label, #signupform input, #loginform input, select option {
+    display: block !important;
+}
+
+
+.menu {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    color: var(--rgb) !important;
+}
+
+.icons {
+    height: 40px;
+    width: 40px;
+}
+
+/*default page*/
+
+
+.mainStr {
+
+    height: 110vh;
+    width: 100vw;
+    /*height: 100% !important;*/
+    /*width: 100%;*/
+    margin: 0%;
+    color: var(--rgb);
+    background-color: var(--backgr);
+    background-image: url("../image/fitness.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.hello {
+    text-align: center;
+    font-family: var(--fontMain);
+    color: var(--rgb);
+    padding-top: 2%;
+    height: 40%;
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+#boxButton {
+    margin: 15% 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+#boxButton a:first-child {
+    margin-left: 2%;
+}
+
+/*authorisation page*/
+.planeLayout {
+    height: 100vh;
+    width: 100vw;
+    color: var(--rgb);
+    background-image: url("../image/pl.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.start {
+    background: linear-gradient(lightslategrey, lightgoldenrodyellow);
+    border-radius: 5% 5% 0 5%;
+    position: center;
+    border: none !important;
+    color: black !important;
+    margin-bottom: 2%;
+}
+
+#authform label, #signupform label {
+    color: whitesmoke;
+}
+
+#authform input, #signupform input, #signupform a {
+    border: 1px solid black;
+}
+
+.error {
+    position: absolute;
+    font-family: Cinzel !important;
+    font-size: 1.2rem;
+    padding: 2%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    background: red;
+    /*background-color: rgb(204, 204, 51);*/
+    z-index: 2;
+    color: white;
+}
+
+.error a {
+    display: block;
+    width: 10%;
+    text-align: center;
+    background-color: white;
+    color: red;
+    padding: 0.5%;
+    text-decoration: none !important;
+    margin-left: 40%;
+}
+
+#addForm, #addForm2, #signupform, #authform {
+    position: absolute;
+    font-family: Cinzel !important;
+    font-size: 1.2rem;
+    padding: 2%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    background: linear-gradient(to right, rgb(128, 128, 128), rgb(0, 0, 0));
+    /*background-color: rgb(204, 204, 51);*/
+    z-index: 2;
+    color: black;
+}
+
+/*registration page*/
+
+#signupform {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    background-color: rgb(255, 255, 102);
+    z-index: 2;
+}
+
+/*main page*/
+.gridBox {
+    /*background-color: rgba(213, 214, 219,0.9) !important;*/
+    /*background-color: var(--backgr) !important;*/
+    background: linear-gradient(to bottom, rgb(87, 87, 87), rgba(16, 9, 9, 0.5));
+    font-family: var(--fontMain) !important;
+    display: grid;
+    margin: 3% 5% 0% 5%;
+    grid-template-columns:2fr 2fr 2fr;
+    grid-template-areas:
+    "box1 box1 box2"
+    "box3 box3 box2  ";
+    padding: 1%;
+}
+
+.box1 {
+    grid-area: box1;
+    font-size: 2rem;
+    text-align: center;
+    color: red !important;
+}
+
+.box2 {
+    grid-area: box2;
+
+    text-align: center;
+}
+
+.box3 {
+    grid-area: box3;
+    /*border: 1px solid white;*/
+    font-size: 2rem;
+    color: white;
+    padding: 1%;
+}
+
+.box3 img {
+    margin-right: 2%;
+    height: 50px !important;
+    width: 50px !important;
+}
+
+#mainStrImg {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    grid-area: box4;
+}
+
+
+.foot {
+    /*background-color: var(--backgr);*/
+    background: linear-gradient(to bottom, rgba(16, 9, 9, 0.5), rgb(87, 87, 87));
+    font-family: Cinzel;
+    margin: 0% 5%;
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns:2fr 2fr 2fr;
+    grid-template-areas:
+    "randExerc randExerc randExerc"
+    "workout1 workout2 workout3";
+    padding: 1%;
+}
+
+.randplan {
+    grid-area: randExerc;
+    text-align: center;
+}
+
+.workout1 {
+    grid-area: workout1;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.workout2 {
+    grid-area: workout2;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.workout3 {
+    grid-area: workout3;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.foot a {
+    display: block;
+    text-decoration: none !important;
+    color: var(--rgb);
+}
+
+.foot a:hover {
+    /*color: rgba(0, 139, 139, 0.5);*/
+    color: red;
+    background-color: black;
+    /*text-decoration: none;*/
+    transition: all 0.7s ease 0s;
+
+}
+
+/* plane of workouts*/
+.boxTableDiary {
+    height: 70%;
+    width: 100%;
+    margin-bottom: 1%;
+}
+/* 
+.tableDiary {
+    width: 100% !important;
+}
+
+.tableDiary th {
+    color: var(--rgb) !important;
+}
+
+.tableDiary td, .tableDiary th {
+    background-color: var(--backgr) !important;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid white;
+
+}
+
+.tableDiary tr {
+    font-size: 2rem;
+    width: 100% !important;
+} */
+
+#diaryBut {
+    height: 10%;
+    width: 100%;
+    font-size: 2rem;
+    padding: 20%;
+    color: black;
+    font-weight: bold;
+
+}
+
+.exerc {
+    padding: 0% 5%;
+    font-weight: bolder !important;
+    background: linear-gradient(to left, yellow, black);
+}
+
+/*mod window */
+.hidden {
+    display: none;
+}
+
+#shadow, #shadow2 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*color: red;*/
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#formDiaryOk {
+    background-color: black;
+    color: yellow;
+    margin-left: 30%;
+    border: black;
+
+}
+
+
+#addButton, #addButton2 {
+    background-color: rgb(255, 255, 102) !important;
+    border: black;
+    color: black !important;
+    margin-left: 3%;
+}
+
+/*table workouts*/
+
+.tableworkots {
+    color: var(--rgb);
+    margin-right: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.tableworkots tr {
+    background-color: var(--backgr) !important;
+    margin-left: 0%;
+    /* margin-right: 2% !important;*/
+    border: 1px solid white;
+    display: block;
+    display: grid;
+    grid-template-columns:2fr 2fr 2fr;
+    grid-template-areas:
+    "exercise exercise exercise "
+    "description description gifs"
+    "lead_time pull gifs";
+
+}
+
+
+.exercise {
+    grid-area: exercise;
+}
+
+.description {
+    grid-area: description;
+}
+
+.lead_time {
+    grid-area: lead_time;
+}
+
+.gifs {
+    grid-area: gifs;
+}
+
+.pull {
+    grid-area: pull !important;
+    background: linear-gradient(to right, goldenrod, black) !important;
+    border: none;
+}
+
+.tableworkots tr td {
+    /*background-color: rgba(176, 0, 161, 255) !important;*/
+    display: block !important;
+    border: none;
+}
+
+.tableworkots tr td:first-child {
+    font-size: 2rem;
+    text-align: center;
+    /*padding-left: 10%;*/
+    padding-bottom: 1%;
+
+}
+
+.tableworkots tr td:nth-child(2), .tableworkots tr td:nth-child(3) {
+    padding-left: 2%;
+}
+
+.tableworkots td:nth-child(4) {
+    /*padding-top: 1.5%;*/
+}
+
+.boxTableWorkouts {
+    height: 150%;
+    width: 100%;
+    background-color: var(--backgr) !important;
+    margin-top: 0%;
+}
+
+/*нумерация*/
+.pagination {
+    /*  position: fixed;*/
+    /*  left: 90%;*/
+    /*  bottom: 2%;*/
+    /*  font-size: 3rem!important;*/
+    /*  color: var(--rgb)!important;*/
+    position: relative;
+    /* left: -20%;*/
+    margin-top: 3%;
+    bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a, .pagination2 a {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid rgb(0, 139, 139);
+    border-radius: 50%;
+    margin-right: 10px;
+    color: white;
+    background-color: aqua;
+
+}
+
+.pagination a:hover, .pagination2 a:hover {
+    background-color: rgba(0, 139, 139, 0.5);
+    color: red;
+    text-decoration: none;
+    /*transition: all 0.7s ease 0s;*/
+}
+
+.pagination2 {
+    position: relative;
+    /*margin: 3% 0% 1% 50%;*/
+    /*margin-top: 3%;*/
+    /*margin-left: 50%;*/
+    top: 95%;
+    left: 50%;
+    /*bottom: 2%;*/
+}
+
+/**/
+.table td {
+    border: 2px solid black;
+    color: var(--rgb);
+}
+
+.table {
+    border-collapse: collapse;
+    background-color: var(--backgr);
+    width: auto;
+    padding: 10%;
+    font-size: 1rem;
+    /*margin-top: 3%;*/
+    border: none !important;
+
+}
+
+.img {
+    height: 250px;
+    width: 360px;
+    margin-bottom: 1%;
+}
+
+
+#addForm2 input[type='text'], .form input[type='text'] {
+    background-color: lightgray;
+    width: 90% !important;
+    display: block;
+    /*margin: 20px;*/
+}
+
+#addForm2 input[type='submit'], .form input[type='submit'] {
+    margin-left: 33%;
+    margin-top: 3%;
+    width: 30%;
+}
+
+#addForm2, .form {
+    margin: auto;
+    margin-top: 3%;
+    width: 20%;
+    padding: 25px;
+    background-color: var(--backgr);
+}
+
+
+#addForm label, #signupform label, #signupform input, #loginform input, select option {
+    display: block !important;
+    margin-left: 0% !important;
+}
+
+#addForm input:first-child {
+    margin-left: -2% !important;
+}
+
+
+#OK {
+
+    width: 30%;
+    margin-top: 3%;
+    margin-left: 30%;
+    border: none;
+    font-family: Satisfy !important;
+
+    background: linear-gradient(to right, red, yellow);
+}
+
+
+.logAlert {
+    /* border: 1px solid red !important; */
+    background-color: rgb(0, 139, 139);
+
+}
+
+
+/*.bar {*/
+/*    background-color: var(--backgr) !important;*/
+
+/*}*/
+
+
+.default {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 560px) {
+    .pull {
+        width: 50%;
+        margin-left: 30%;
+    }
+}
+
+.tableworkots tr {
+    grid-template-columns:2fr 2fr 1fr;
+    grid-template-areas:
+    "exercise exercise exercise "
+    "gifs gifs pull"
+    "description description description"
+    "lead_time lead_time lead_time";
+}
+
+
+@media (max-width: 768px) {
+    .mainStr {
+        height: 100% !important;
+        background-color: black;
+        /*background-position: center;*/
+        /*background-size: cover;*/
+
+
+    }
+
+    .boxTableDiary {
+        height: 100% !important;
+    }
+
+    .tableDiary tr th, .tableDiary tr td {
+        font-size: 1rem !important;
+    }
+
+    .tableworkots tr {
+        width: 100%;
+    }
+
+    #addForm {
+        padding: 3%;
+    }
+
+    #addForm label {
+        display: block;
+    }
+
+
+    .form {
+        width: 70% !important;
+        margin: auto;
+        padding: 3%;
+    }
+
+    .form lable, .form input {
+        margin: 1% !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form input[type='submit'] {
+        margin-left: 30% !important;
+    }
+
+    /*.tableworkots tr {*/
+    /*    grid-template-columns:2fr 2fr 2fr;*/
+    /*    grid-template-areas:*/
+    /*"exercise exercise exercise "*/
+    /*"gifs gifs pull"*/
+    /*"description description description"*/
+    /*"lead_time lead_time lead_time";*/
+
+    /*}*/
+
+    .pull {
+        margin-top: 40%;
+    }
+
+    .foot {
+        font-size: 1rem !important;
+    }
+
+    .box2 {
+        display: none;
+    }
+
+    .gridBox {
+        background: linear-gradient(to bottom, rgb(87, 87, 87), rgba(16, 9, 9, 0.5));
+        font-family: var(--fontMain) !important;
+        display: grid;
+        margin: 3% 5% 0% 5%;
+        grid-template-columns:2fr 2fr 2fr;
+        grid-template-areas:
+    "box1 box1 box1"
+    "box3 box3 box3 "
+    "box4 box4 box4";
+        padding: 1%;
+
+
+    }
+
+    .hello {
+        border: 1px solid white;
+        background-color: var(--backgr);
+        padding: 5%;
+
+    }
+
+    .hello h1 {
+        font-size: 1.3rem !important;
+
+    }
+
+    #boxButton {
+        margin: auto;
+    }
+
+    #boxButton a:first-child {
+        margin-left: 15% !important;
+    }
+
+    .table {
+        width: 100% !important;
+    }
+
+    .table th {
+        text-align: center;
+    }
+
+    .infofooter {
+        display: none;
+    }
+
+    .tableDiary tr {
+        border: 1px solid white;
+        width: 100% !important;
+        display: grid;
+        grid-template-columns:2fr 2fr;
+        grid-template-areas:
+                "exerciseD  lead_timeD"
+                "doneDiary  editDiary ";
+    }
+
+    .tableDiary td {
+        border: none;
+    }
+
+    .exerciseD {
+        grid-area: exerciseD;
+        color: var(--rgb) !important;
+    }
+
+    .lead_timeD {
+        grid-area: lead_timeD;
+    }
+
+    .doneDiary a {
+        border: 1px solid var(--rgb);
+    }
+
+    .doneDiary {
+        grid-area: doneDiary;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .editDiary a {
+        border: 1px solid white;
+    }
+
+    .editDiary {
+        grid-area: editDiary;
+        display: flex;
+        justify-content: start;
+    }
+
+    #addForm2 input {
+        width: 70%;
+    }
+
+    #addForm2 {
+        width: 40%;
+        position: absolute;
+        font-family: Cinzel !important;
+        font-size: 1.2rem;
+        padding: 2%;
+        left: 50% !important;
+        top: 70% !important;
+        /*transform: translate(-50%, -50%);*/
+        border: 1px solid black;
+        background: linear-gradient(to right, rgb(128, 128, 128), rgb(0, 0, 0));
+        /*background-color: rgb(204, 204, 51);*/
+        z-index: 2;
+        color: black;
+    }
+
+}
+
+@media (min-width: 769px) {
+    ul {
+        width: 100% !important;
+    }
+
+    .menuAdm {
+        margin-right: 10% !important;
+    }
+
+    .menuAdm li {
+        margin-left: 3% !important;
+    }
+
+
+    .mainStr {
+        height: auto;
+    }
+
+    .default {
+        height: 100%;
+    }
+
+    .infofooter {
+        display: grid;
+        margin: 3% 5% 0% 5%;
+        border: 1px solid white;
+        font-size: 2rem;
+        font-family: var(--fontMain);
+        background-color: rgba(199, 209, 204, 0.3);
+        color: white;
+        /*background: linear-gradient(to top,rgba(174,178,176,0.9));*/
+        grid-template-columns:2fr 2fr 2fr;
+        grid-template-areas:
+    "one one one"
+    "two two two";
+        padding: 1%;
+
+    }
+
+    .infofooter p:first-child {
+        grid-area: one;
+        text-align: center;
+    }
+
+    .infofooter p:last-child {
+        grid-area: two;
+        text-align: center;
+    }
+    .tableworkots tr {
+        background-color: var(--backgr) !important;
+        margin-left: 0%;
+        /* margin-right: 2% !important;*/
+        border: 1px solid white;
+        display: block;
+        display: grid;
+        grid-template-columns:2fr 2fr 2fr;
+        grid-template-areas:
+    "exercise exercise exercise "
+    "description description gifs"
+    "lead_time pull gifs";
+
+    }
+
+}
+
+@media (min-width: 1224px) {
+
+}
