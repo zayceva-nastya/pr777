@@ -129,6 +129,7 @@
     margin-top: 10%;
     border: 1px solid white;
     background-color: rgba(0, 0, 0, 0.5) !important;
+  
 }
 
 #boxButton {
@@ -158,6 +159,9 @@
     border: none !important;
     color: black !important;
     margin-bottom: 2%;
+    &:hover{
+        border:1px solid red!important;
+      }
 }
 
 #authform label, #signupform label {
@@ -362,7 +366,10 @@
     margin-bottom: 1%;
 }
 .tableDiary {
-    width: 100% !important;
+    width: 90% !important;
+    margin: 3%;
+    // display: flex;
+    // flex-direction:row ;
 
 th {
     color: $colorText !important;
@@ -379,6 +386,7 @@ th {
 tr {
     font-size: 2rem;
     width: 100% !important;
+    // align-items: ;
 }
 }
 
@@ -477,13 +485,14 @@ tr {
     border: none;
 }
 
-.tableworkots tr td {
+.tableworkots {
+    tr td {
     /*background-color: rgba(176, 0, 161, 255) !important;*/
     display: block !important;
     border: none;
 }
 
-.tableworkots tr td:first-child {
+ tr td:first-child {
     font-size: 2rem;
     text-align: center;
     /*padding-left: 10%;*/
@@ -491,10 +500,10 @@ tr {
 
 }
 
-.tableworkots tr td:nth-child(2), .tableworkots tr td:nth-child(3) {
+ tr td:nth-child(2), tr td:nth-child(3) {
     padding-left: 2%;
 }
-
+}
 
 
 .boxTableWorkouts {
@@ -525,12 +534,14 @@ tr {
 
 }
 
-.pagination a:hover, .pagination2 a:hover {
+.pagination, .pagination2{
+a:hover {
     background-color: rgba(0, 139, 139, 0.5);
     color: red;
     text-decoration: none;
     /*transition: all 0.7s ease 0s;*/
 }
+} 
 
 .pagination2 {
     position: relative;
@@ -543,10 +554,6 @@ tr {
 }
 
 /**/
-.table td {
-    border: 2px solid black;
-    color: $colorText;
-}
 
 .table {
     border-collapse: collapse;
@@ -556,6 +563,11 @@ tr {
     font-size: 1rem;
     /*margin-top: 3%;*/
     border: none !important;
+
+    td {
+        border: 2px solid black;
+        color: $colorText;
+    }
 
 }
 
@@ -761,18 +773,19 @@ tr {
         display: none;
     }
 
-    .tableDiary tr {
-        border: 1px solid white;
+    .tableDiary  {
+        tr{
+            border: 1px solid white;
         width: 100% !important;
         display: grid;
         grid-template-columns:2fr 2fr;
         grid-template-areas:
                 "exerciseD  lead_timeD"
                 "doneDiary  editDiary ";
-    }
-
-    .tableDiary td {
+            }  
+            td {
         border: none;
+    }
     }
 
     .exerciseD {
@@ -811,10 +824,7 @@ tr {
             border: 1px solid white;
     }
 
-    #addForm2 input {
-        width: 70%;
-    }
-
+  
     #addForm2 {
         width: 40%;
         position: absolute;
@@ -829,6 +839,10 @@ tr {
         /*background-color: rgb(204, 204, 51);*/
         z-index: 2;
         color: black;
+
+        input {
+            width: 70%;
+        }
     }
 
 }

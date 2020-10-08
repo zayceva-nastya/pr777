@@ -4,7 +4,7 @@
 ?>
 
 <div class="container">
-    <form action="<?=$action?>" method="post" id="authform">
+    <form action="<?= $action ?>" method="post" id="authform">
         <div class="text-center homefit">HomeFit</div>
         <div class="text-white text-center">Authorization</div>
         <div class="form-group">
@@ -15,6 +15,7 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" name="password">
         </div>
+       
         <a class="btn start" href="/">BACK</a>
         <button type="submit" class="btn btn-primary start">OK</button>
     </form>
